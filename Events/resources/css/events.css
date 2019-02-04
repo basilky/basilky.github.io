@@ -1,0 +1,121 @@
+/*
+ Styling for the Events Page Takes Here........
+*/
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+header
+{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/chess.jpg);
+    background-size: cover;
+    background-position: center;
+    height:100vh;
+}
+
+.main-event
+{
+    position: absolute;   
+    top: 30%;
+    left: 10%; 
+}
+
+h1
+{
+    color: #fff;
+    font-size: 200%;
+    word-spacing: 8px;
+    animation-name: moveTop;
+    animation-duration: 3s;
+    
+}
+
+.logo
+{
+    width: auto;
+    height: 150px;
+    float: left;
+}
+
+.main
+{
+    float: right;
+    list-style: none;
+    margin-top: 18px;
+    margin-right: 17px;
+    animation-name: moveLeft;
+    animation-duration: 3s;
+}
+
+.main li
+{
+    font-size: 20px;
+    font-weight: 350;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 20px; 
+}
+
+.main li a:link,
+.main li a:visited 
+{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main li a:hover,
+.main li a:active 
+{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff0000;
+}
+
+
+@keyframes moveTop
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    
+    100%
+    {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveLeft
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    
+    100%
+    {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
