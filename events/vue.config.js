@@ -4,6 +4,7 @@ module.exports = {
     {
         config.optimization.splitChunks(false)
     },
+    filenameHashing: false,
     runtimeCompiler: true,
     configureWebpack: {
         devServer: {
