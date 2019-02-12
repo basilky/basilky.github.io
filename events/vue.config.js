@@ -5,6 +5,7 @@ module.exports = {
         config.optimization.splitChunks(false)
     },
     filenameHashing: false,
+    publicPath: "/events/",
     runtimeCompiler: true,
     configureWebpack: {
         devServer: {
