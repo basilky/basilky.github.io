@@ -1,65 +1,67 @@
 <template>
   <div id="app">
-    <main>
-      <section class="section-tours">
-        <div class="row">
-          <ul class="main">
-            <li>
-              <a href="#" v-on:click="selected='1'">{{test}} Events</a>
-            </li>
-            <li>
-              <a href="#" v-on:click="selected='2'">Liiive Events</a>
-            </li>
-            <li>
-              <a href="#" v-on:click="selected='3'">Past Events</a>
-            </li>
-          </ul>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <div v-bind:key="event.id" v-for="event in events" class="col-1-of-3">
-            <div class="card" v-if="event.type==selected">
-              <div class="card__side card__side--front">
-                <div
-                  class="card__picture card__picture--1"
-                  v-bind:style="{'background-image':'url(' + 'nat-'+event.id +'.jpg'+ ')'}"
-                >&nbsp;</div>
+    <div class="row">
+      <ul class="main" style="text-align:center;">
+        <li>
+          <a href="#" v-on:click="selected='0'">All Events</a>
+        </li>
+        <li>
+          <a href="#" v-on:click="selected='1'">Live Events</a>
+        </li>
+        <li>
+          <a href="#" v-on:click="selected='2'">Upcoming Events</a>
+        </li>
+        <li>
+          <a href="#" v-on:click="selected='3'">Past Events</a>
+        </li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div
+        v-if="(event.type==selected)||(selected=='0')"
+        v-bind:key="event.id"
+        v-for="event in events"
+        class="col-1-of-3"
+      >
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div
+              class="card__picture card__picture--1"
+              v-bind:style="{'background-image':'url(' + 'nat-'+event.id +'.jpg'+ ')'}"
+            >&nbsp;</div>
 
-                <h4 class="card__heading">
-                  <span
-                    v-bind:class="['card__heading-span','card__heading-span--'+event.id%3]"
-                  >{{event.name}}</span>
-                </h4>
-                <div class="card__details">
-                  <ul>
-                    <br>
-                    <li>{{event.date}}</li>
-                    <li>{{event.time}}</li>
-                    <li>Prerequisite :{{event.prerequisite}}</li>
-                    <li>Reg. Fee :{{event.fee}}</li>
-                  </ul>
-                </div>
-              </div>
-              <div v-bind:class="['card__side card__side--back','card__side--back-'+event.id%3]">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Ethical Hacking Workshop</p>
-                    <p class="card__price-value">Hurry Up!</p>
-                  </div>
-                  <a href="#" class="btn btn--white">Register</a>
-                </div>
-              </div>
+            <h4 class="card__heading">
+              <span
+                v-bind:class="['card__heading-span','card__heading-span--'+event.id%3]"
+              >{{event.name}}</span>
+            </h4>
+            <div class="card__details">
+              <ul>
+                <br>
+                <li>{{event.date}}</li>
+                <li>{{event.time}}</li>
+                <li>Prerequisite :{{event.prerequisite}}</li>
+                <li>Reg. Fee :{{event.fee}}</li>
+              </ul>
             </div>
-            <br>
-            <br>
-            <br>
+          </div>
+          <div v-bind:class="['card__side card__side--back','card__side--back-'+event.id%3]">
+            <div class="card__cta">
+              <div class="card__price-box">
+                <p class="card__price-only">Ethical Hacking Workshop</p>
+                <p class="card__price-value">Hurry Up!</p>
+              </div>
+              <a href="#" class="btn btn--white">Register</a>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -70,14 +72,13 @@ export default {
   data()
   {
     return {
-      test: "wfewghf",
-      selected: "1",
+      selected: "0",
       events: [
         {
           "id": "1",
           "name": "Ethical Hacking Workshop",
           "status": "1",
-          "type": "1",
+          "type": "2",
           "date": "11/12/13",
           "time": "12:00:00",
           "prerequisite": "",
@@ -144,7 +145,7 @@ export default {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 65%;
 }
 
 body {
@@ -220,11 +221,10 @@ body {
 }
 
 .main li {
-  font-size: 20px;
-  font-weight: 350;
+  font-size: 25px;
+  font-weight: 650;
   display: inline-block;
-  margin-left: 40px;
-  margin-right: 180px;
+  padding-right: 50px;
 }
 
 .main li a:link,
@@ -241,7 +241,7 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 2px solid #ff0000;
+  border-bottom: 3px solid #ff0000;
 }
 
 .heading-tertiary {
@@ -579,72 +579,5 @@ body {
     margin-left: 3%;
     margin-bottom: 4%;
   }
-}
-.row .col-1-of-4 {
-  width: calc((100% - 3 * 6rem) / 4);
-}
-.row .col-2-of-3 {
-  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
-}
-.row .col-2-of-4 {
-  width: calc((2 * (100% - 3 * 6rem) / 4) + 6rem);
-}
-.row .col-3-of-4 {
-  width: calc((3 * (100% - 3 * 6rem) / 4) + 2 * 6rem);
-}
-
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(126, 213, 111, 0.8),
-    rgba(40, 180, 133, 0.8)
-  );
-  background-size: cover;
-  background-position: top;
-  -ms-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-.header__logo {
-  display: block;
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-  height: 3.5rem;
-}
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.section-about {
-  background: #f7f7f7;
-  padding: 25rem 0;
-  margin-top: -20vh;
-}
-
-.section-features {
-  padding: 20rem 0;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(126, 213, 111, 0.8),
-    rgba(40, 180, 133, 0.8)
-  );
-  background-size: cover;
-  transform: skewY(-7deg);
-  margin-top: -10rem;
-}
-.section-features > * {
-  transform: skewY(7deg);
-}
-
-.section-tours {
-  background: #f7f7f7;
-  padding: 25rem 0 15rem 0;
-  margin-top: -10rem;
 }
 </style>
