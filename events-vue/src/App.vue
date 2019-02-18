@@ -5,13 +5,13 @@
         <div class="row">
           <ul class="main">
             <li>
-              <a href="#0">{{test}} Evvents</a>
+              <a href="#" v-on:click="selected='1'">{{test}} Events</a>
             </li>
             <li>
-              <a href="#0">Liiive Events</a>
+              <a href="#" v-on:click="selected='2'">Liiive Events</a>
             </li>
             <li>
-              <a href="#0">Past Events</a>
+              <a href="#" v-on:click="selected='3'">Past Events</a>
             </li>
           </ul>
           <br>
@@ -21,7 +21,7 @@
           <br>
           <br>
           <div v-bind:key="event.id" v-for="event in events" class="col-1-of-3">
-            <div class="card">
+            <div class="card" v-if="event.type==selected">
               <div class="card__side card__side--front">
                 <div
                   class="card__picture card__picture--1"
@@ -71,11 +71,13 @@ export default {
   {
     return {
       test: "wfewghf",
+      selected: "1",
       events: [
         {
           "id": "1",
           "name": "Ethical Hacking Workshop",
           "status": "1",
+          "type": "1",
           "date": "11/12/13",
           "time": "12:00:00",
           "prerequisite": "",
@@ -86,6 +88,7 @@ export default {
           "id": "2",
           "name": "Ethical Hacking Workshop",
           "status": "1",
+          "type": "1",
           "date": "11/12/13",
           "time": "12:00:00",
           "prerequisite": "",
@@ -96,6 +99,7 @@ export default {
           "id": "3",
           "name": "Ethical Hacking Workshop",
           "status": "1",
+          "type": "3",
           "date": "11/12/13",
           "time": "12:00:00",
           "prerequisite": "",
@@ -106,6 +110,7 @@ export default {
           "id": "4",
           "name": "Ethical Hacking Workshop",
           "status": "1",
+          "type": "2",
           "date": "11/12/13",
           "time": "12:00:00",
           "prerequisite": "",
@@ -115,7 +120,8 @@ export default {
         {
           "id": "5",
           "name": "Ethical Hacking Workshop",
-          "status": "1",
+          "status": "2",
+          "type": "2",
           "date": "11/12/13",
           "time": "12:00:00",
           "prerequisite": "",
@@ -564,8 +570,15 @@ body {
 .row .col-1-of-2 {
   width: calc((100% - 6rem) / 2);
 }
-.row .col-1-of-3 {
+.col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
+}
+@media only screen and (max-width: 768px) {
+  [class*="col-1-of-3"] {
+    width: 94%;
+    margin-left: 3%;
+    margin-bottom: 4%;
+  }
 }
 .row .col-1-of-4 {
   width: calc((100% - 3 * 6rem) / 4);
