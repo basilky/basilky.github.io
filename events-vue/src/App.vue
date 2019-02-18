@@ -50,10 +50,15 @@
           <div v-bind:class="['card__side card__side--back','card__side--back-'+event.id%3]">
             <div class="card__cta">
               <div class="card__price-box">
-                <p class="card__price-only">Ethical Hacking Workshop</p>
-                <p class="card__price-value">Hurry Up!</p>
+                <p class="card__price-only">{{event.name}}</p>
+                <p class="card__price-value">{{event.description}}</p>
               </div>
-              <a href="#" class="btn btn--white">Register</a>
+              <a
+                v-if="event.status=='1'"
+                v-bind:href="event.link"
+                class="btn btn--white"
+              >Register Now</a>
+              <a v-else-if="event.status=='0'" href="#" class="btn btn--white">Registration Closed</a>
             </div>
           </div>
         </div>
@@ -77,13 +82,14 @@ export default {
         {
           "id": "1",
           "name": "Ethical Hacking Workshop",
-          "status": "1",
+          "status": "0",
           "type": "2",
           "date": "11/12/13",
           "time": "12:00:00",
           "prerequisite": "",
           "fee": "400",
-          "poster": "nat-5.jpg"
+          "poster": "nat-5.jpg",
+          "link": "http://google.com"
         },
         {
           "id": "2",
