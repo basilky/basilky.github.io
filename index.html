@@ -27,11 +27,6 @@
     <script src="js/modernizr.js"></script>
     <script src="js/pace.min.js"></script>
 
-    <!-- Title Logo
-    ================================================== -->
-    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
-    <link rel="icon" href="logo.ico" type="image/x-icon">
-
 </head>
 
 <body id="top">
@@ -42,7 +37,7 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="logo.gif" alt="Homepage">
+                <img src="logo.png" alt="Homepage">
             </a>
         </div>
 
@@ -55,22 +50,13 @@
 
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll" href="#home" title="Home">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="News">What's New ?</a></li>
-                    <li><a class="smoothscroll" href="#services" title="Features">Features</a></li>
-                    <li><a class="smoothscroll" href="#works" title="Events">Events</a></li>
-                    <li><a href="Events/events.html" title="College Events" target="_blank">College Events</a></li>
+                    <li><a href="/events" title="College Events">College Events</a></li>
                     <li><a class="smoothscroll" href="#contact" title="Contact">Contact</a></li>
                     <li><a href="Team/files/about.html" title="About Us" target="_blank">About Us</a></li>
                 </ul>
 
 
-                <p>" One of the Reason I like <a href="https://opensource.org" target="_blank">Open Source</a> is that
-                    it allows people to work on the parts thay are good at and I don't mean just on a technical
-                    level;some people are into the whole selling and support and that's just not me." - Linus Torvalds
-                </p>
-
-
-                <ul class="header-nav__social">
+                <!-- <ul class="header-nav__social">
                     <li>
                         <a href="#"><i class="fa fa-facebook"></i></a>
                     </li>
@@ -82,7 +68,7 @@
                     </li>
 
                 </ul>
-
+ -->
             </div> <!-- end header-nav__content -->
 
         </nav> <!-- end header-nav -->
@@ -110,14 +96,14 @@
                 <h3>Welcome to FOSS Club of MITS</h3>
 
                 <h1>
-                    With Open Source<br>The Possibilities are Endless...
+                    With Open Source<br>&nbsp; The Possibilities are Endless...
                 </h1>
 
                 <div class="home-content__buttons">
                     <a href="#about" class="smoothscroll btn btn--stroke">
                         Explore More
                     </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke">
+                    <a href="/events" class="btn btn--stroke" title="College Events">
                         Events
                     </a>
                 </div>
@@ -157,7 +143,8 @@
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead subhead--dark">Hello There !</h3>
+                <!--                 <h3 class="subhead subhead--dark">Hello There !</h3>
+ -->
                 <h1 class="display-1 display-1--light">Welcome to the World of Open Source</h1>
             </div>
         </div> <!-- end section-header -->
@@ -611,7 +598,7 @@
 
     <!-- Contact Us
     ================================================== -->
-    <!-- <section id="contact" class="s-contact">
+    <section id="contact" class="s-contact">
 
         <div class="overlay"></div>
         <div class="contact__line"></div>
@@ -619,61 +606,15 @@
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Contact Us</h3>
-                <h1 class="display-2 display-2--light">Reach out us for knowing more ; or just say hello</h1>
+                <h1 class="display-2 display-2--light">Reach out us for knowing more.</h1>
             </div>
         </div>
 
         <div class="row contact-content" data-aos="fade-up">
 
+
+
             <div class="contact-primary">
-
-                <h3 class="h6">Send Us A Message</h3>
-
-                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
-                    <fieldset>
-
-                        <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
-                                minlength="2" required="" aria-required="true" class="full-width">
-                        </div>
-                        <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value=""
-                                required="" aria-required="true" class="full-width">
-                        </div>
-                        <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value=""
-                                class="full-width">
-                        </div>
-                        <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10"
-                                cols="50" required="" aria-required="true" class="full-width"></textarea>
-                        </div>
-                        <div class="form-field">
-                            <button class="full-width btn--primary">Submit</button>
-                            <div class="submit-loader">
-                                <div class="text-loader">Sending...</div>
-                                <div class="s-loader">
-                                    <div class="bounce1"></div>
-                                    <div class="bounce2"></div>
-                                    <div class="bounce3"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </form>
-
-                <div class="message-warning">
-                    Something went wrong. Please try again.
-                </div>
-
-                <div class="message-success">
-                    Your message was sent, thank you!<br>
-                </div>
-
-            </div> 
-
-            <div class="contact-secondary">
                 <div class="contact-info">
 
                     <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
@@ -691,7 +632,6 @@
                         <h5>Email Us At</h5>
                         <p>
                             mgmits_foss@gmail.com<br>
-                            foss_things@gmail.com
                         </p>
                     </div>
 
@@ -699,30 +639,28 @@
                         <h5>Call Us At</h5>
                         <p>
                             Phone: (+91) 122 344 4567<br>
-                            Mobile: (+91) 122 344 4567<br>
-
                         </p>
                     </div>
 
-                    <ul class="contact-social">
-                        <li>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
 
-                    </ul> 
-
-                </div> 
-            </div> 
+                </div>
+            </div>
+            <div class="contact-secondary">
+                <div style="overflow:hidden;position: relative;"><iframe width="300" height="440"
+                        src="https://maps.google.com/maps?hl=en&amp;q=Muthoot%20Institute+(MITS)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <style>
+                        #gmap_canvas img {
+                            max-width: none !important;
+                            background: none !important
+                        }
+                    </style>
+                </div><br />
+            </div>
 
         </div>
 
-    </section>  -->
+    </section>
 
 
     <!-- Footer Section
@@ -752,13 +690,13 @@
         </div> -->
         <!-- end footer-main -->
 
-        <div class="row footer-bottom">
+        <div>
 
             <div class="col-twelve">
-                <div class="copyright">
+                <div>
                     <!--                     <span>© Copyright S3 CSE 2017-2021</span>
  --> <span style="color:white">Site Created with <span style="color:red;font-size: 20px;">&#10084;</span> by <a
-                            href="http://www.mgmits.com/" target="_blank">MITSians</a></span>
+                            href="http://www.mgmits.com/" target="_blank"><span style="color:red;">MITSians</a></span>
                 </div>
 
                 <div class="go-top">

@@ -5,10 +5,10 @@
         <div class="row">
           <ul class="main">
             <li>
-              <a href="#0">{{test}} Events</a>
+              <a href="#0">{{test}} Evvents</a>
             </li>
             <li>
-              <a href="#0">Live Events</a>
+              <a href="#0">Liiive Events</a>
             </li>
             <li>
               <a href="#0">Past Events</a>
@@ -70,7 +70,7 @@ export default {
   data()
   {
     return {
-      test: "wfewf",
+      test: "wfewghf",
       events: [
         {
           "id": "1",
