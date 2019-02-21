@@ -71,72 +71,28 @@
 </template>
 
 <script>
-
+import $ from 'jquery'
 export default {
   name: 'app',
   data()
   {
     return {
       selected: "0",
-      events: [
-        {
-          "id": "1",
-          "name": "Ethical Hacking Workshop",
-          "status": "0",
-          "type": "2",
-          "date": "11/12/13",
-          "time": "12:00:00",
-          "prerequisite": "",
-          "fee": "400",
-          "poster": "nat-5.jpg",
-          "link": "http://google.com"
-        },
-        {
-          "id": "2",
-          "name": "Ethical Hacking Workshop",
-          "status": "1",
-          "type": "1",
-          "date": "11/12/13",
-          "time": "12:00:00",
-          "prerequisite": "",
-          "fee": "400",
-          "poster": "nat-5.jpg"
-        },
-        {
-          "id": "3",
-          "name": "Ethical Hacking Workshop",
-          "status": "1",
-          "type": "3",
-          "date": "11/12/13",
-          "time": "12:00:00",
-          "prerequisite": "",
-          "fee": "400",
-          "poster": "nat-5.jpg"
-        },
-        {
-          "id": "4",
-          "name": "Ethical Hacking Workshop",
-          "status": "1",
-          "type": "2",
-          "date": "11/12/13",
-          "time": "12:00:00",
-          "prerequisite": "",
-          "fee": "400",
-          "poster": "nat-5.jpg"
-        },
-        {
-          "id": "5",
-          "name": "Ethical Hacking Workshop",
-          "status": "2",
-          "type": "2",
-          "date": "11/12/13",
-          "time": "12:00:00",
-          "prerequisite": "",
-          "fee": "400",
-          "poster": "nat-5.jpg"
-        }
-      ]
+      events: []
     }
+  },
+  mounted: function ()  {
+    var self = this;
+    $.ajax({
+      url: 'http://linuxloves.com/fossevents.php',
+      method: 'GET',
+      success: function (data)      {
+        self.events = data;
+      },
+      error: function (error)      {
+        console.log(error);
+      }
+    });
   }
 }
 </script>
