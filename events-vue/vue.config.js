@@ -6,10 +6,9 @@ module.exports = {
     },
     runtimeCompiler: true,
     outputDir: path.resolve(__dirname, "../events/"),
-    publicPath: process.env.NODE_ENV === 'events'
-        ? '/production-sub-path/'
+    publicPath: process.env.NODE_ENV === 'production'
+        ? "../events/"
         : '/',
-    assetsDir: ".",  //relative to outputDir
     configureWebpack: {
         devServer: {
             public: 'mitsfoss.in:8080',
