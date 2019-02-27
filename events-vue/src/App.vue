@@ -29,7 +29,7 @@
           <div class="card__side card__side--front">
             <div
               class="card__picture card__picture--1"
-              v-bind:style="{'background-image':'url(' + 'nat-'+event.id +'.jpg'+ ')'}"
+              v-bind:style="{'background-image':'url(' + event.poster+ ')'}"
             >&nbsp;</div>
 
             <h4 class="card__heading">
@@ -59,6 +59,7 @@
                 class="btn btn--white"
               >Register Now</a>
               <a v-else-if="event.status=='0'" href="#" class="btn btn--white">Registration Closed</a>
+              <a v-else-if="event.status=='2'" href="#" class="btn btn--white">Coming Soon</a>
             </div>
           </div>
         </div>
@@ -332,6 +333,7 @@ body {
   height: 52rem;
 }
 .card__side {
+  border-color: #777;
   height: 52rem;
   transition: all 0.8s ease;
   position: absolute;
@@ -341,7 +343,7 @@ body {
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.15);
 }
 .card__side--front {
   background-color: #fff;
@@ -449,12 +451,12 @@ body {
   color: #fff;
 }
 .card__price-only {
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
+  font-weight: 100;
 }
 .card__price-value {
-  font-size: 6rem;
-  font-weight: 100;
+  font-size: 1.7rem;
 }
 
 .composition {
