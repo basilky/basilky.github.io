@@ -89,8 +89,9 @@
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 16px;
+  bottom: 200px;
   left: 16px;
+  padding-bottom: 200px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -234,6 +235,7 @@
 }
 .material-card.mc-active .mc-content {
   padding-top: 5.6em;
+  padding-bottom: 5.6em;
   position: relative;
   margin-right: 16px;
 }

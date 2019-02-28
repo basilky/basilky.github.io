@@ -535,7 +535,7 @@ body {
   width: calc((100% - 6rem) / 2);
 }
 .col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3.1);
+  width: calc((100% - 2 * 6rem) / 3.2);
 }
 @media only screen and (max-width: 768px) {
   [class*="col-1-of-3"] {
