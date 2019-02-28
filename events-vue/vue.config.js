@@ -11,7 +11,7 @@ module.exports = {
         : '/',
     configureWebpack: {
         devServer: {
-            public: 'mitsfoss.in:8080',
+            public: 'mitsfoss.test:8080',
             disableHostCheck: true,
             clientLogLevel: 'info',
             // proxy: 'http://ktunotes.in:80'
