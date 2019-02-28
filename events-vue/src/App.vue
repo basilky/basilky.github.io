@@ -85,7 +85,7 @@ export default {
   mounted: function ()  {
     var self = this;
     $.ajax({
-      url: 'http://linuxloves.com/fossevents.php',
+      url: 'https://linuxloves.com/fossevents.php',
       method: 'GET',
       success: function (data)      {
         self.events = data;
